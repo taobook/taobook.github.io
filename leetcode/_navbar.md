@@ -1,2 +1,0 @@
-- [Home](https://yultao.github.io)
-- [LeetCode](https://leetcode.com/problemset/algorithms/)
