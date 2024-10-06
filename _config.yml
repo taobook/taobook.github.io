@@ -4,5 +4,5 @@ plugins:
 title: TaoBook
 description: collections of books
 
-show_downloads: true
-google_analytics: xxx
+show_downloads: false
+google_analytics: 9776665063
