@@ -1,10 +1,133 @@
-
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>TaoBook</title>
-<meta name="description" content="TaoBook">
-<meta name="keywords" content="TaoBook">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page with Fixed Header and Collapsible Sidebar</title>
+  <style>
+    /* General body and layout styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Header styles */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: darkblue;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+        z-index: 1000;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        height: calc(100% - 60px);
+        width: 250px;
+        background-color: #444;
+        transition: transform 0.3s ease;
+        overflow-x: hidden;
+    }
+
+    .sidebar.collapsed {
+        transform: translateX(-100%);
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+
+    .sidebar a:hover {
+        background-color: #575757;
+    }
+
+    /* Sidebar toggle button */
+    .toggle-btn {
+        position: fixed;
+        top: 5px;
+        left: 20px;
+        background-color: darkblue;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        z-index: 1100;
+        transition: 0.3s;
+    }
+
+    /* Main content styles */
+    .content {
+        margin-top: 60px;
+        margin-left: 250px;
+        padding: 20px;
+        transition: margin-left 0.3s;
+        flex-grow: 1;
+    }
+
+    .content.shifted {
+        margin-left: 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 200px;
+        }
+
+        .content {
+            margin-left: 200px;
+        }
+
+        .content.shifted {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 60px;
+            transform: translateX(-100%);
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(0);
+        }
+
+        .content {
+            margin-left: 0;
+            padding-top: 60px;
+        }
+
+        .content.shifted {
+            margin-left: 0;
+        }
+    }
+  </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFB08EX0SW"></script>
@@ -16,11 +139,44 @@
   gtag('config', 'G-EFB08EX0SW');
 </script>
 <body>
-<dl>
-  <dt><a target="_blank" href="leetcode">LeetCode Notes</a></dt>
-  <dd>- Sample solutions to LeetCode problems</dd>
-  <dt><a target="_blank" href="designpattern">Design Patterns</a></dt>
-  <dd>- Short descriptions of common design patterns</dd>
-</dl>
+
+<!-- Fixed Header -->
+<header>
+  TaoBook
+</header>
+<!-- Toggle Button -->
+<button class="toggle-btn" id="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+
+<!-- Collapsible Sidebar -->
+<div class="sidebar" id="sidebar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+  <a href="#settings">Settings</a>
+</div>
+
+<!-- Main Content -->
+<div class="content" id="content">
+
+  <dl>
+    <dt><a target="_blank" href="leetcode">LeetCode Notes</a></dt>
+    <dd>- Sample solutions to LeetCode problems</dd>
+    <dt><a target="_blank" href="designpattern">Design Patterns</a></dt>
+    <dd>- Short descriptions of common design patterns</dd>
+  </dl>
+</div>
+
+<!-- JavaScript to Toggle Sidebar -->
+<script>
+  function toggleSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      var content = document.getElementById('content');
+      sidebar.classList.toggle('collapsed');
+      content.classList.toggle('shifted');
+  }
+</script>
+
 </body>
 </html>
