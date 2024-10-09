@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="taoo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TaoBook</title>
   <style>
@@ -18,6 +19,13 @@
         flex-direction: column;
         height: 100vh;
         overflow: hidden;
+
+                    margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://files.oaiusercontent.com/file-mFwOKAyZxhn2fItVg6YlL9lo?se=2024-10-08T12%3A40%3A55Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2195a138-48a0-4945-a901-e6141e300ab6.webp&sig=tVhhyNrjWuRTpWmrKvGxrgIcqOfi2YyKd58Qtklv/O8%3D'); /* Replace with the correct path */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background */
+            color: #333; /* Text color */
     }
 
     /* Header styles */
@@ -126,6 +134,13 @@
         .content.shifted {
             margin-left: 0;
         }
+    }
+
+    img {
+        max-width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid #333; /* Optional border for the logo */
+        border-radius: 8px; /* Optional rounded corners */
     }
   </style>
 </head>
