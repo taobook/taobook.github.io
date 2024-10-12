@@ -160,7 +160,7 @@
   TaoBook
 </header>
 <!-- Toggle Button -->
-<button class="toggle-btn" id="toggle-btn" onclick="toggleSidebar()">☰</button>
+<button class="toggle-btn" id="toggle-btn" onclick="toggleSidebar()">☷</button>
 
 
 <!-- Collapsible Sidebar -->
@@ -190,6 +190,13 @@
       var content = document.getElementById('content');
       sidebar.classList.toggle('collapsed');
       content.classList.toggle('shifted');
+
+      var toggleBtn = document.getElementById("toggle-btn");
+      if(sidebar.classList.value.includes("collapsed")) {
+        toggleBtn.innerText = "☰";
+      } else {
+        toggleBtn.innerText = "☷";
+      }
   }
 </script>
 
