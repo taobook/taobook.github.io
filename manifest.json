@@ -1,11 +1,26 @@
 {
   "short_name": "TT",
-  "name": "TTool",
+  "name": "TT",
   "icons": [
     {
+      "src": "logo16.svg",
+      "sizes": "16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "logo24.svg",
+      "sizes": "24x24",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "logo32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
       "src": "logo64.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "sizes": "64x64",
+      "type": "image/svg+xml"
     },
     {
       "src": "logo192.svg",
