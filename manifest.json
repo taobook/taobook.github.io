@@ -3,34 +3,49 @@
   "name": "TT",
   "icons": [
     {
-      "src": "logo16.svg",
+      "src": "./logo/logo16.svg",
       "sizes": "16x16",
       "type": "image/svg+xml"
     },
     {
-      "src": "logo24.svg",
+      "src": "./logo/logo24.svg",
       "sizes": "24x24",
       "type": "image/svg+xml"
     },
     {
-      "src": "logo32.svg",
+      "src": "./logo/logo32.svg",
       "sizes": "32x32",
       "type": "image/svg+xml"
     },
     {
-      "src": "logo64.svg",
+      "src": "./logo/logo64.svg",
       "sizes": "64x64",
       "type": "image/svg+xml"
     },
     {
-      "src": "logo192.svg",
+      "src": "./logo/logo192.svg",
       "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.svg",
+      "src": "./logo/logo512.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshotw.png",
+      "sizes": "836x408",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "TT"
+    },
+    {
+      "src": "screenshot.png",
+      "sizes": "578x408",
+      "type": "image/png",
+      "label": "TT"
     }
   ],
   "start_url": ".",
